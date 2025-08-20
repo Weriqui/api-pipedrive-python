@@ -4,7 +4,7 @@
 
 ## Installing
 ```
-pip install pipedrive-python-lib
+pip install api-pipedrive-python==1
 ```
 
 ## Usage
@@ -523,6 +523,16 @@ response = client.webhooks.create_hook_subscription(data)
 #### Delete webhook
 ```
 response = client.webhooks.delete_hook_subscription('HOOK_ID')
+```
+
+### LegacyTeams
+
+API docs: https://developers.pipedrive.com/docs/api/v1/legacyTeams
+
+
+#### Get all teams
+```python
+response = client.teams.get_all_teams()
 ```
 
 ## Requirements
