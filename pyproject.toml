@@ -1,15 +1,14 @@
 [tool.poetry]
-name = "pipedrive-python-lib"
-version = "1.2.3"
+name = "api-pipedrive-python"
+version = "1"
 description = "API wrapper for Pipedrive written in Python"
-authors = ["Miguel Ferrer <ingferrermiguel@gmail.com>"]
+authors = ["Weriqui Ferreira de Souza <weriquetiao@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 packages = [{include = "pipedrive"}]
 
 [tool.poetry.dependencies]
-python = "^3.7"
-requests = "^2.26.0"
+python = "^3.9"
 
 
 [build-system]
