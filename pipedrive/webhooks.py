@@ -17,4 +17,4 @@ class Webhooks(object):
 
     def delete_hook_subscription(self, hook_id, **kwargs):
         url = "webhooks/{}".format(hook_id)
-        return self._client._delete(self._client.BASE_URL + url, **kwargs)
+        return self._client._delete(self._client.BASE_URL + url, **kwargs) 
