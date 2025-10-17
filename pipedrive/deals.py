@@ -1,3 +1,4 @@
+
 class Deals(object):
     def __init__(self, client):
         self._client = client
@@ -87,3 +88,11 @@ class Deals(object):
     def get_deal_updates(self, deal_id, **kwargs):
         url = "deals/{}/flow".format(deal_id)
         return self._client._get(self._client.BASE_URL + url, **kwargs)
+    
+    def search_by_term(self, term, **kwargs):
+        url = "itemSearch/web?strict_mode=True&term={term}&start=0".format(term=term)
+        preview = self._client._get(self._client.BASE_URL + url, **kwargs)
+
+
+
+
