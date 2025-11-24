@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "api-pipedrive-python"
-version = "1.4"
+version = "1.5"
 description = "API wrapper for Pipedrive written in Python"
 authors = ["Weriqui Ferreira de Souza <weriquetiao@gmail.com>"]
 license = "MIT"

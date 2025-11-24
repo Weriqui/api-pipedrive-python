@@ -468,6 +468,43 @@ params = {
 }
 response = client.recents.get_recent_changes(params=params)
 ```
+
+### Search
+
+API docs: https://developers.pipedrive.com/docs/api/v1/ItemSearch
+
+#### Search for items by term
+```python
+response = client.search.search_term('SEARCH_TERM')
+```
+
+#### Initialize search and get persons data
+```python
+# Searches and organizes deals by person based on phone number
+client.search.iniciar('PHONE_NUMBER')
+
+# Access the organized persons data
+persons_data = client.search.persons
+```
+
+The `iniciar` method searches for persons by phone number and organizes their deals by status:
+- **open**: Active deals
+- **won**: Won deals
+- **lost**: Lost deals
+- **deleted**: Deleted deals
+
+Each deal includes custom fields like SDR, product, debt values, benefits, and monthly payments.
+
+#### Get a specific deal
+```python
+response = client.search.get_deal('DEAL_ID')
+```
+
+#### Get all deals associated with a person
+```python
+deals = client.search.get_deals_by_person('PERSON_ID')
+```
+
 ### Leads
 API docs: https://developers.pipedrive.com/docs/api/v1/Leads
 
