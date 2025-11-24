@@ -12,7 +12,11 @@ class SearchItems(object):
     def __init__(self, client):
         self._client = client
         self.base_url = "https://api.pipedrive.com"
-        self.data = self.search_term()
+        self.data = False
+        self.persons = False
+
+    def iniciar(self, term, **kwargs):
+        self.data = self.search_term(term,**kwargs)
         self.persons = self.get_all_persons()
         
     def get_deal(self, deal_id, **kwargs):

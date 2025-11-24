@@ -19,6 +19,7 @@ from pipedrive.subscriptions import Subscriptions
 from pipedrive.users import Users
 from pipedrive.webhooks import Webhooks
 from pipedrive.teams import Teams
+from pipedrive.search import SearchItems
 
 
 class Client:
@@ -46,6 +47,7 @@ class Client:
         self.users = Users(self)
         self.webhooks = Webhooks(self)
         self.teams = Teams(self)
+        self.search = SearchItems(self)
         if domain:
             if not domain.endswith("/"):
                 domain += "/"
